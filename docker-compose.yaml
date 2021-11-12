@@ -1,0 +1,27 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: antonio
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+#  db:
+#    image: mariadb
+#    container_name: novainstancia
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: novainstancia
+#      MYSQL_PASSWORD: root
+#    ports:
+#      - "3316:3306"
+
+# Use postgres/example user/password credentials
